@@ -1,39 +1,47 @@
 const { application } = require('express')
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3000;
 
 
 
 const profielen = [
     {
+        "url": "sophie.jpeg",
         "naam": "Sophie",
         "geboortedatum": "27-01-2000",
         "hobbie": "Klimmen",
+        "bestemming": "china", 
         "duur": "2 weken",
         "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     }, 
 
     {
+        "url": "jesper.jpeg",
         "naam": "Jesper",
         "geboortedatum": "02-04-1999",
         "hobbie": "Klimmen",
+        "bestemming": "china", 
         "duur": "2 weken" ,
         "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     }, 
 
     {
+        "url": "rosalie.jpeg",
         "naam": "Rosalie",
         "geboortedatum": "14-07-1995",
         "hobbie": "Klimmen",
+        "bestemming": "china", 
         "duur": "2 weken",
         "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     },
 
     {
+        "url": "kevin.jpeg",
         "naam": "Kevin",
         "geboortedatum": "23-02-1998",
         "hobbie": "Klimmen",
+        "bestemming": "china", 
         "duur": "2 weken",
         "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     }
@@ -43,6 +51,8 @@ const profielen = [
 
 //statc files 
 app.use(express.static('public'))
+
+
 
 
 //set view
@@ -65,7 +75,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/registeren', (req, res) => {
-    res.render('registeren')
+    const title = "registeren"; 
+    res.render('registeren', {title})
 })
 
 //listen on port 3000
