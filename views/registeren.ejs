@@ -12,9 +12,13 @@
         
         <section class=" registeren"> 
             <img src="../..." alt="profiel foto toevoegen van de gebruiker">
-            <form>
+            <form action="/registreren" method="post">
+
+                <label for="avatar">Kies een profiel foto:</label>
+                <input type="file"id="avatar" name="avatar" accept="image/png, image/jpeg">
+                
                     <label for="name"> Naam:</label>
-                    <input type="text" id="name" name="naam">    
+                    <input type="text" id="name" name="naam" required>    
 
                     <label for="DOB"> Geboortedatum:</label>
                     <input type="date" id="DOB" name="geboortedatum">
