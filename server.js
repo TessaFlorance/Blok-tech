@@ -16,51 +16,11 @@ const { redirect } = require('express/lib/response');
 let db = null; 
 
 
-const profielen = [
-    {
-        "url": "sophie.jpeg",
-        "naam": "Sophie",
-        "geboortedatum": "27-01-2000",
-        "hobbie": "Klimmen",
-        "bestemming": "china", 
-        "duur": "2 weken",
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
-    }, 
-
-    {
-        "url": "jesper.jpeg",
-        "naam": "Jesper",
-        "geboortedatum": "02-04-1999",
-        "hobbie": "Knutslen",
-        "bestemming": "china", 
-        "duur": "2 weken" ,
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
-    }, 
-
-    {
-        "url": "rosalie.jpeg",
-        "naam": "Rosalie",
-        "geboortedatum": "14-07-1995",
-        "hobbie": "Klimmen",
-        "bestemming": "china", 
-        "duur": "2 weken",
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
-    },
-
-    {
-        "url": "kevin.jpeg",
-        "naam": "Kevin",
-        "geboortedatum": "23-02-1998",
-        "hobbie": "Klimmen",
-        "bestemming": "china", 
-        "duur": "2 weken",
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
-    }
-]
 
 
 
-//statc files 
+
+//statc files Middle ware
 app.use(express.static('public'))
 
 
@@ -70,52 +30,40 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //set view
 app.set('view engine', 'ejs')
 
-
-//om url te linken app.get('/aanmelden)
-//{aanmelden: aanmeld pagina } is ejs tekst template kan ook zonder 
-//'aanmelden' is de ejs/html pagina
-
+app.get('/', async (req, res) => {
+    res.render('index')
+})
 
 app.get('/aanmelden', (req, res) => {
     res.render('aanmelden', {aanmelden: 'aanmeld pagina'})
 })
 
 app.get('/profielen', async (req, res) => {
-    const query = {"hobbie": "Klimmen"};
+    const query = {"Bestemming": "China"};
     const filtered = await db.collection('profielen').find(query).toArray();
-    // console.log(filtered);
-    res.render('profielen',{profielen: filtered} )
-    
+    console.log(filtered);
+    res.render('profielen',{profielen: filtered} )   
 })
 
- 
-app.get('/', async (req, res) => {
-    res.render('index')
-
-})
 
 app.get('/registeren', async (req, res) => {
     const title = "registeren"; 
     res.render('registeren', {title})
-    
- 
+  
 })
 
 app.post('/registreren', async (req, res) => {
 
-    console.log('yo');
-    
     let toevoegenProfiel = {
-        slug: slug(req.body.naam),
-        name: req.body.naam,
-        DOB: req.body.geboortedatum,
-        hobby: req.body.hobby,
-        bestemming: req.body.bestemming,
-        duur: req.body.duur,
-
+        slug: slug(req.body.Naam),
+        Name: req.body.Naam,
+        DOB: req.body.Geboortedatum,
+        Hobby: req.body.Hobby,
+        Bestemming: req.body.Bestemming,
+        Duur: req.body.Duur,
+        Beschrijving: req.body.Beschrijving,
     };
 
-    console.log('kaas')
     console.log(toevoegenProfiel);
     await db.collection('profielen').insertOne(toevoegenProfiel)
 
@@ -123,7 +71,7 @@ app.post('/registreren', async (req, res) => {
 })
 
 
-//conect db 
+//connect db 
 async function connectDB() {
     const uri = process.env.DB_URI;
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true,});

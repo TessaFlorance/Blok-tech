@@ -1,41 +1,41 @@
 [
     {
         "url": "sophie.jpeg",
-        "naam": "Sophie",
-        "geboortedatum": "27-01-2000",
-        "hobbie": "Klimmen",
-        "bestemming": "china", 
-        "duur": "2 weken",
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
+        "Name": "Sophie",
+        "DOB": "27-01-2000",
+        "Hobby": "Klimmen",
+        "Bestemming": "China", 
+        "Duur": "2 weken",
+        "Beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     }, 
 
     {
         "url": "jesper.jpeg",
-        "naam": "Jesper",
-        "geboortedatum": "02-04-1999",
-        "hobbie": "knutselen",
-        "bestemming": "china", 
-        "duur": "2 weken" ,
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
+        "Name": "Jesper",
+        "DOB": "02-04-1999",
+        "Hobby": "Knutselen",
+        "Bestemming": "China", 
+        "Duur": "2 weken" ,
+        "Beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     }, 
 
     {
         "url": "rosalie.jpeg",
-        "naam": "Rosalie",
-        "geboortedatum": "14-07-1995",
-        "hobbie": "Klimmen",
-        "bestemming": "china", 
-        "duur": "2 weken",
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
+        "Name": "Rosalie",
+        "DOB": "14-07-1995",
+        "Hobby": "Klimmen",
+        "Bestemming": "China", 
+        "Duur": "2 weken",
+        "Beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     },
 
     {
         "url": "kevin.jpeg",
-        "naam": "Kevin",
-        "geboortedatum": "23-02-1998",
-        "hobbie": "Klimmen",
-        "bestemming": "china", 
-        "duur": "2 weken",
-        "beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
+        "Name": "Kevin",
+        "DOB": "23-02-1998",
+        "Hobby": "Klimmen",
+        "Bestemming": "China", 
+        "Duur": "2 weken",
+        "Beschrijving": "dit wordt nog een keer echt een mooie lange beschrijving"
     }
 ]
