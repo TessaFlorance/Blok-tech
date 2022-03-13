@@ -13,12 +13,8 @@ const { ObjectId } = require("mongodb");
 const res = require('express/lib/response');
 const { redirect } = require('express/lib/response');
 
+
 let db = null; 
-
-
-
-
-
 
 //statc files Middle ware
 app.use(express.static('public'))
@@ -38,13 +34,6 @@ app.get('/aanmelden', (req, res) => {
     res.render('aanmelden', {aanmelden: 'aanmeld pagina'})
 })
 
-app.get('/profielen', async (req, res) => {
-    const query = {"Bestemming": "China"};
-    const filtered = await db.collection('profielen').find(query).toArray();
-    console.log(filtered);
-    res.render('profielen',{profielen: filtered} )   
-})
-
 
 app.get('/registeren', async (req, res) => {
     const title = "registeren"; 
@@ -56,6 +45,7 @@ app.post('/registreren', async (req, res) => {
 
     let toevoegenProfiel = {
         slug: slug(req.body.Naam),
+        url: req.body.avatar,
         Name: req.body.Naam,
         DOB: req.body.Geboortedatum,
         Hobby: req.body.Hobby,
@@ -67,7 +57,11 @@ app.post('/registreren', async (req, res) => {
     console.log(toevoegenProfiel);
     await db.collection('profielen').insertOne(toevoegenProfiel)
 
-    res.redirect('/profielen'); 
+
+    const query = {"Bestemming": req.body.Bestemming, "Hobby": req.body.Hobby, "Duur": req.body.Duur  };
+    const filtered = await db.collection('profielen').find(query).toArray();
+    console.log(filtered);
+    res.render('profielen',{profielen: filtered} )   
 })
 
 
@@ -84,6 +78,13 @@ async function connectDB() {
     throw error;
     }
 }
+
+
+
+
+
+
+
 
 //listen on port 3000
 app.listen(port, () => {
