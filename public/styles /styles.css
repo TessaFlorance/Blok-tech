@@ -12,11 +12,18 @@ body{
 .registeren{
     margin: 10px;
     position: relative;
+
 }
 
+.registeren h1{
+   text-align: center;
+   margin: 1em;
+}
 .registeren form{
     display: flex;
     flex-direction: column;
+    margin: 0em 0em 0em .2em;
+    
 }
 
 .registeren label {
@@ -25,22 +32,27 @@ body{
 }
 
 .registeren input{
-    margin: 10px ;
+    margin: 5px 50px 10px 10px ;
     padding: 5px;
+    border-radius: 1em;
 
 }
 
 .registeren select{
-    margin: 10px;
+    margin: 5px 50px 10px 10px;
     padding: 5px;
+    border-radius: 1em;
 }
 
 
 /*naam label*/
 .registeren label:nth-of-type(1){
-    color: green;
+    /* margin: 1em 0em 0em 1em; */
 }
 
+.registeren label:nth-of-type(5){
+  
+}
 
 
 /****** STYLING PROFIELEN CAROUSEL********/
@@ -62,8 +74,7 @@ body{
     overflow: scroll;
     scroll-snap-type: x mandatory;
     
-    background-color: black;
-    border-radius: 2em;
+
   }
     
 .caroussel ul li{
