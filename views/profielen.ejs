@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,29 @@
     <title>profielen</title>
     <link href="/styles /styles.css" rel="stylesheet">
 </head>
+
 <body class="caroussel">
     <main>
-    
-        <section >
-            <h1> Profielen </h1>
 
-                <ul>
-                    <% profielen.forEach(function(profiel){ %>
-                    <li>
-                        <img src="/img /<%=profiel.url %>" alt="profielimg">
-                        <p><%= profiel.Name %></p>
-                        <p><%= profiel.Geboortedatum %></p>
-                        <p><%= profiel.Hobby %></p>
-                        <p><%= profiel.Bestemming %></p>
-                        <p><%= profiel.Duur %></p>
-                        <p><%= profiel.Beschrijving %><p>
-                        <img src=".... " alt="chaticon">
-                    </li>
+        <section>
+            <h1> Deze mensen zijn een match!</h1>
+
+            <ul>
+                <% profielen.forEach(function(profiel){ %>
+                <li>
+                    <img src="/img /<%=profiel.url %>" alt="profielimg">
+                    <p><%= profiel.Name %></p>
+                    <p><%= profiel.Geboortedatum %></p>
+                    <p><%= profiel.Hobby %></p>
+                    <p><%= profiel.Bestemming %></p>
+                    <p><%= profiel.Duur %></p>
+                    <p><%= profiel.Beschrijving %><p>
+                            <img src="../public/img /icons8-chat-30.png" alt="chaticon">
+                </li>
                 <% }) %>
-                </ul>
+            </ul>
         </section>
     </main>
 </body>
+
 </html>
