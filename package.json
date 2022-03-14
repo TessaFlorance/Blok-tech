@@ -28,10 +28,10 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "mongodb": "^4.4.1",
-    "multer": "^1.4.4"
+    "multer": "^1.4.4",
+    "slug": "^5.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "slug": "^5.3.0"
+    "nodemon": "^2.0.15"
   }
 }
