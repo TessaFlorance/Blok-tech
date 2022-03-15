@@ -1,3 +1,4 @@
+//Imports
 const { application } = require('express');
 const express = require('express');
 const multer  = require('multer');
@@ -17,31 +18,33 @@ const { redirect } = require('express/lib/response');
 let db = null; 
 
 //statc files Middle ware
-app.use(express.static('public'))
-
+app.use(express.static('public'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //set view
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+
 
 app.get('/', async (req, res) => {
     res.render('index')
-})
+});
 
 app.get('/aanmelden', (req, res) => {
     res.render('aanmelden', {aanmelden: 'aanmeld pagina'})
-})
+});
 
 
 app.get('/registeren', async (req, res) => {
     const title = "registeren"; 
     res.render('registeren', {title})
   
-})
+});
 
+//Formulier pagina 
 app.post('/registreren', async (req, res) => {
+
 
     let toevoegenProfiel = {
         slug: slug(req.body.Naam),
@@ -55,18 +58,22 @@ app.post('/registreren', async (req, res) => {
     };
 
     console.log(toevoegenProfiel);
-    await db.collection('profielen').insertOne(toevoegenProfiel)
+    await db.collection('profielen').insertOne(toevoegenProfiel, async (error, item) => {
 
+        //om gebruikers te fileren/ matchen bij een profiel 
+        const id = item.insertedId;
+        const query = {"Bestemming": req.body.Bestemming, "Hobby": req.body.Hobby, "Duur": req.body.Duur, _id:{$ne: id}};
+        const filtered = await db.collection('profielen').find(query).toArray();
+    
 
-    const query = {"Bestemming": req.body.Bestemming, "Hobby": req.body.Hobby, "Duur": req.body.Duur  };
-    const filtered = await db.collection('profielen').find(query).toArray();
-    console.log(filtered);
-    res.render('profielen',{profielen: filtered} )   
+        res.render('profielen',{profielen: filtered})   
+    });
+
 })
 
 app.get('/chat', (req, res) => {
     res.render('chat')
-})
+});
 
 //connect db 
 async function connectDB() {
@@ -74,12 +81,13 @@ async function connectDB() {
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true,});
     
     try {
-    await client.connect();
-    db = client.db(process.env.DB_NAME);
-    
-    } catch (error) {
-    throw error;
-    }
+        await client.connect();
+        db = client.db(process.env.DB_NAME);
+    } 
+        catch (error)
+        {
+            throw error;
+        }
 }
 
 
