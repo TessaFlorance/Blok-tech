@@ -75,10 +75,11 @@ app.get('/chat', (req, res) => {
     res.render('chat')
 });
 
-//connect db 
+
+    //connect db 
 async function connectDB() {
     const uri = process.env.DB_URI;
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true,});
+    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true,}); 
     
     try {
         await client.connect();
@@ -89,13 +90,7 @@ async function connectDB() {
             throw error;
         }
 }
-
-
-
-
-
-
-
+ 
 
 //listen on port 3000
 app.listen(port, () => {
@@ -107,5 +102,4 @@ app.listen(port, () => {
 //error 
 app.use( (req, res) => {
     res.status(404).send('error 404 file not found')
-})
-
+}); 
