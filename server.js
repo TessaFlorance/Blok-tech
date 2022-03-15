@@ -64,6 +64,9 @@ app.post('/registreren', async (req, res) => {
     res.render('profielen',{profielen: filtered} )   
 })
 
+app.get('/chat', (req, res) => {
+    res.render('chat')
+})
 
 //connect db 
 async function connectDB() {

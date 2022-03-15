@@ -19,8 +19,9 @@
                 <% profielen.forEach(function(profiel){ %>
                 <li>
                     <img src="/img /<%=profiel.url %>" alt="profielimg">
-                    <img src="https://img.icons8.com/material-rounded/24/000000/chat--v1.png"/>
+                    <a href="/chat"><img src="https://img.icons8.com/material-rounded/24/000000/chat--v1.png"/></a>
                     
+            
                     <p><%= profiel.Name %></p>
                     <p><%= profiel.Geboortedatum %></p>
                     <p>Hobby: <%= profiel.Hobby %></p>

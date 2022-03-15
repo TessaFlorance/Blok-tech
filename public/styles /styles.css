@@ -137,17 +137,19 @@ body {
 }
 
 
-.caroussel img:nth-of-type(1) {
+.caroussel img {
     border-radius: 50%;
     width: 20em;
     height: 20em;
     padding: 15px;
 }
-.caroussel img:nth-of-type(2) {
-  width: 2em;
+
+
+.caroussel a img {
+    width: 4em;
   height: auto;
 }
-
+}
 .caroussel ul li p {
     color: #6E6153;
 }
@@ -159,4 +161,32 @@ body {
 }
 
 
-/****** PROFIELEN PAGINA ********/
+/****** Chat ********/
+
+.chan main{
+    position: absolute;
+}
+.chat h1{
+    text-align: center;
+    margin: 1em 0em;
+    color: #6E6153; 
+}
+
+.chat img{
+    border-radius: 50%;
+    width: 7em;
+    height: auto;
+    padding: 15px; 
+    z-index: 100;
+}
+
+.chat p{
+    position: absolute;
+    background-color:  #B9B9A5;
+    padding: 20px 106px 20px 20px;
+    top: 89px;
+    left: 100px;
+    border-radius: 1em;
+    margin: 0px 10px;
+}
+
