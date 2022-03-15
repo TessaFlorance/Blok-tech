@@ -9,17 +9,59 @@
 body {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #CED2BA;
 }
 
+/************ index, inlog pagina  **********/
+.index h1 {
+    text-align: center;
+    margin: 100px 90px 0px 0px;
+    color: #6E6153;
+    font-weight: bold;
+}
+
+.index form {
+
+    display: flex;
+    flex-direction: column;
+    margin: 3em 1em;
+}
+
+.index label {
+    margin: 10px;
+    justify-self: center;
+    color: #6E6153;
+}
+
+.index input {
+    margin: 5px 50px 10px 10px;
+    padding: 5px;
+    border-radius: 1em;
+    background-color: #EAEAEA;
+    color: #6E6153;
+    font-weight: bold;
+
+}
+
+.aanmelden a {
+
+    margin: 0px 0px 0px 30px;
+    text-decoration: none;
+    background-color: #B9B9A5;
+    border-radius: 1em;
+    padding: 10px;
+    color: #6E6153;
+}
+
+/********* registreren *********/
 .registeren {
     margin: 10px;
     position: relative;
-
 }
 
 .registeren h1 {
-    text-align: center;
-    margin: 1em;
+    margin: 1em 0em;
+    color: #6E6153;
 }
 
 .registeren form {
@@ -30,14 +72,18 @@ body {
 }
 
 .registeren label {
-    margin: 10px;
-    justify-self: center;
+    margin: 1em 0em;
+    color: #6E6153;
+
 }
 
 .registeren input {
     margin: 5px 50px 10px 10px;
     padding: 5px;
     border-radius: 1em;
+    background-color: #EAEAEA;
+    color: #6E6153;
+    font-weight: bold;
 
 }
 
@@ -45,26 +91,26 @@ body {
     margin: 5px 50px 10px 10px;
     padding: 5px;
     border-radius: 1em;
+    background-color: #EAEAEA;
+    color: #6E6153;
+    font-weight: bold;
 }
 
 
-/*naam label*/
-.registeren label:nth-of-type(1) {
-    /* margin: 1em 0em 0em 1em; */
+.registeren input:nth-of-type(1) {
+    background-color: #CED2BA;
+
 }
 
-.registeren label:nth-of-type(5) {}
 
 
 /****** STYLING PROFIELEN CAROUSEL********/
 
-.caroussel main {
-    background-color: #E9F2D5;
-}
 
 .caroussel h1 {
     text-align: center;
-    color: green;
+    margin: 1em 0em;
+    color: #6E6153;
 }
 
 .caroussel ul {
@@ -75,33 +121,41 @@ body {
 
     overflow: scroll;
     scroll-snap-type: x mandatory;
+
+
 }
 
 .caroussel ul li {
 
     scroll-snap-align: center;
-    background-color: #6E6153;
-    padding: 0px 0px 100px 0px;
+    background-color: #B9B9A5;
+    padding: 0px 0px 50px 0px;
     border-radius: 2em;
     margin: 10px;
     text-align: center;
+
 }
 
 
-.caroussel ul li img {
+.caroussel img:nth-of-type(1) {
     border-radius: 50%;
     width: 20em;
     height: 20em;
     padding: 15px;
 }
+.caroussel img:nth-of-type(2) {
+  width: 2em;
+  height: auto;
+}
 
 .caroussel ul li p {
-    color: white;
+    color: #6E6153;
 }
 
 .caroussel p:nth-of-type(1) {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: .25em;
+    font-weight: bold;
 }
 
 

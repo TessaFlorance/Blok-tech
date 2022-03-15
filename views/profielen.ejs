@@ -19,13 +19,14 @@
                 <% profielen.forEach(function(profiel){ %>
                 <li>
                     <img src="/img /<%=profiel.url %>" alt="profielimg">
+                    <img src="https://img.icons8.com/material-rounded/24/000000/chat--v1.png"/>
+                    
                     <p><%= profiel.Name %></p>
                     <p><%= profiel.Geboortedatum %></p>
-                    <p><%= profiel.Hobby %></p>
-                    <p><%= profiel.Bestemming %></p>
-                    <p><%= profiel.Duur %></p>
-                    <p><%= profiel.Beschrijving %><p>
-                            <img src="../public/img /icons8-chat-30.png" alt="chaticon">
+                    <p>Hobby: <%= profiel.Hobby %></p>
+                    <p>Bestemming: <%= profiel.Bestemming %></p>
+                    <p>Duur: <%= profiel.Duur %></p>
+                    <p>Beschrijving: <%= profiel.Beschrijving %><p>
                 </li>
                 <% }) %>
             </ul>
