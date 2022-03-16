@@ -35,7 +35,6 @@ app.get('/aanmelden', (req, res) => {
     res.render('aanmelden', {aanmelden: 'aanmeld pagina'})
 });
 
-
 app.get('/registeren', async (req, res) => {
     const title = "registeren"; 
     res.render('registeren', {title})
@@ -44,7 +43,6 @@ app.get('/registeren', async (req, res) => {
 
 //Formulier pagina 
 app.post('/registreren', async (req, res) => {
-
 
     let toevoegenProfiel = {
         slug: slug(req.body.Naam),
@@ -68,15 +66,13 @@ app.post('/registreren', async (req, res) => {
 
         res.render('profielen',{profielen: filtered})   
     });
-
 })
 
 app.get('/chat', (req, res) => {
     res.render('chat')
 });
 
-
-    //connect db 
+//connect db 
 async function connectDB() {
     const uri = process.env.DB_URI;
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true,}); 
@@ -91,7 +87,6 @@ async function connectDB() {
         }
 }
  
-
 //listen on port 3000
 app.listen(port, () => {
     console.info(`listening on port ${port}`);

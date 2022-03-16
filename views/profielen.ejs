@@ -17,22 +17,39 @@
 
             <ul>
                 <% profielen.forEach(function(profiel){ %>
-                <li>
-                    <img src="/img /<%=profiel.url %>" alt="profielimg">
-                    <a href="/chat"><img src="https://img.icons8.com/material-rounded/24/000000/chat--v1.png"/></a>
-                    
-            
-                    <p><%= profiel.Name %></p>
-                    <p><%= profiel.DOB%></p>
-                    <p>Hobby: <%= profiel.Hobby %></p>
-                    <p>Bestemming: <%= profiel.Bestemming %></p>
-                    <p>Duur: <%= profiel.Duur %></p>
-                    <p>Beschrijving: <%= profiel.Beschrijving %><p>
-                </li>
+               <div class="inner">
+                    <li>
+                        <img src="/img /<%=profiel.url %>" alt="profielimg">
+                        <a href="/chat"><img src="https://img.icons8.com/material-rounded/24/000000/chat--v1.png"/></a>
+                        
+                
+                        <p><%= profiel.Name %></p>
+                        <p><%= profiel.DOB%></p>
+                        <p>Hobby: <%= profiel.Hobby %></p>
+                        <p>Bestemming: <%= profiel.Bestemming %></p>
+                        <p>Duur: <%= profiel.Duur %></p>
+                        <p>Beschrijving: <%= profiel.Beschrijving %><p>
+                    </li>
+
+            </div>
+
+
                 <% }) %>
             </ul>
+
+            <div class="map">
+                <button class="active first"></button>
+                <button class="second"></button>
+                <button class="third"></button>
+              </div>
+
         </section>
+
+       
     </main>
+
+    
+    <script src="/script/api.js"></script>
 </body>
 
 </html>
