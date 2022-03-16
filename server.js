@@ -17,16 +17,15 @@ const { redirect } = require('express/lib/response');
 
 let db = null; 
 
-//statc files Middle ware
+//statc files Middle ware 
 app.use(express.static('public'));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //set view
 app.set('view engine', 'ejs');
 
-
+    //get started at home page 
 app.get('/', async (req, res) => {
     res.render('index')
 });
@@ -43,7 +42,7 @@ app.get('/registeren', async (req, res) => {
 
 //Formulier pagina 
 app.post('/registreren', async (req, res) => {
-
+    // gegevens die ingevuld zijn worden op de pagina 
     let toevoegenProfiel = {
         slug: slug(req.body.Naam),
         url: req.body.avatar,
@@ -56,6 +55,7 @@ app.post('/registreren', async (req, res) => {
     };
 
     console.log(toevoegenProfiel);
+    // await and insert info van nieuw profiel in de database 
     await db.collection('profielen').insertOne(toevoegenProfiel, async (error, item) => {
 
         //om gebruikers te fileren/ matchen bij een profiel 
@@ -92,7 +92,6 @@ app.listen(port, () => {
     console.info(`listening on port ${port}`);
     connectDB().then( () => console.log("we have a connection with mongo"))
 })
-
 
 //error 
 app.use( (req, res) => {
