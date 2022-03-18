@@ -9,13 +9,13 @@
     <link href="/styles /styles.css" rel="stylesheet">
 </head>
 
-<body class="caroussel">
+<body class="caroussel"  >
     <main>
 
         <section>
             <h1> Deze mensen zijn een match!</h1>
 
-            <ul>
+            <ul draggable="true"> 
                 <% profielen.forEach(function(profiel){ %>
                 <li>
                     <img src="/img /<%=profiel.url %>" alt="profielimg">
@@ -32,11 +32,10 @@
                 <% }) %>
             </ul>
         </section>
-
-
+        
     </main>
 
-
+    
     <script src="/script/api.js"></script>
 </body>
 

@@ -14,17 +14,16 @@ body {
 
 /************ index, inlog pagina  **********/
 .index h1 {
-    text-align: center;
     margin: 100px 90px 0px 0px;
-    color: #6E6153;
+    text-align: center;
     font-weight: bold;
+    color: #6E6153;
 }
 
 .index form {
-
+    margin: 3em 1em;
     display: flex;
     flex-direction: column;
-    margin: 3em 1em;
 }
 
 .index label {
@@ -37,19 +36,17 @@ body {
     margin: 5px 50px 10px 10px;
     padding: 5px;
     border-radius: 1em;
+    font-weight: bold;
     background-color: #EAEAEA;
     color: #6E6153;
-    font-weight: bold;
-
 }
 
 .aanmelden a {
-
     margin: 0px 0px 0px 30px;
-    text-decoration: none;
-    background-color: #B9B9A5;
-    border-radius: 1em;
     padding: 10px;
+    text-decoration: none;
+    border-radius: 1em;
+    background-color: #B9B9A5;
     color: #6E6153;
 }
 
@@ -65,48 +62,43 @@ body {
 }
 
 .registeren form {
+    margin: 0em 0em 0em .2em;
     display: flex;
     flex-direction: column;
-    margin: 0em 0em 0em .2em;
-
 }
 
 .registeren label {
     margin: 1em 0em;
     color: #6E6153;
-
 }
 
 .registeren input {
     margin: 5px 50px 10px 10px;
     padding: 5px;
+    font-weight: bold;
     border-radius: 1em;
     background-color: #EAEAEA;
     color: #6E6153;
-    font-weight: bold;
 
 }
 
 .registeren select {
     margin: 5px 50px 10px 10px;
     padding: 5px;
+    font-weight: bold;
     border-radius: 1em;
     background-color: #EAEAEA;
     color: #6E6153;
-    font-weight: bold;
 }
 
 
 .registeren input:nth-of-type(1) {
     background-color: #CED2BA;
-
 }
 
 
 
 /****** STYLING PROFIELEN CAROUSEL********/
-
-
 .caroussel h1 {
     text-align: center;
     margin: 1em 0em;
@@ -114,40 +106,36 @@ body {
 }
 
 .caroussel ul {
-    display: flex;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
     list-style: none;
 
     overflow: scroll;
     scroll-snap-type: x mandatory;
-
-
 }
 
 .caroussel ul li {
-
+    margin: 10px;
+    padding: 0px 0px 50px 0px;
+    text-align: center;
+    border-radius: 2em;
     scroll-snap-align: center;
     background-color: #B9B9A5;
-    padding: 0px 0px 50px 0px;
-    border-radius: 2em;
-    margin: 10px;
-    text-align: center;
-
 }
 
 
 .caroussel img {
-    border-radius: 50%;
+    padding: 15px;
     width: 20em;
     height: 20em;
-    padding: 15px;
+    border-radius: 50%;
 }
 
 
 .caroussel a img {
     width: 4em;
-  height: auto;
+    height: auto;
 }
 
 .caroussel ul li p {
@@ -155,38 +143,39 @@ body {
 }
 
 .caroussel p:nth-of-type(1) {
-    font-size: 1.5em;
     margin: .25em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 
 /****** Chat ********/
-
 .chan main{
     position: absolute;
 }
+
 .chat h1{
-    text-align: center;
     margin: 1em 0em;
+    text-align: center;
     color: #6E6153; 
 }
 
 .chat img{
-    border-radius: 50%;
+    padding: 15px; 
     width: 7em;
     height: auto;
-    padding: 15px; 
+    border-radius: 50%;
     z-index: 100;
 }
 
 .chat p{
-    position: absolute;
-    background-color:  #B9B9A5;
+    margin: 0px 10px;
     padding: 20px 106px 20px 20px;
+    position: absolute;
     top: 89px;
     left: 100px;
     border-radius: 1em;
-    margin: 0px 10px;
+    background-color:  #B9B9A5;
 }
+
 
