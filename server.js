@@ -37,7 +37,6 @@ app.get('/aanmelden', (req, res) => {
 app.get('/registeren', async (req, res) => {
     const title = "registeren"; 
     res.render('registeren', {title})
-  
 });
 
 //Formulier pagina 
