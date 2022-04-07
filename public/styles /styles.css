@@ -99,32 +99,38 @@ body {
 
 
 /****** STYLING PROFIELEN CAROUSEL********/
-.caroussel h1 {
+
+
+.profielen h1{
     text-align: center;
     margin: 1em 0em;
     color: #6E6153;
 }
 
+
+.caroussel{
+    /* overflow: scroll;   */
+}
 .caroussel ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
+    overflow-x: scroll;
 
-    overflow: scroll;
-    scroll-snap-type: x mandatory;
+   
+     /* scroll-snap-type: x mandatory;  */
 }
 
 .caroussel ul li {
     margin: 10px;
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 100px 0px;
     text-align: center;
     border-radius: 2em;
     scroll-snap-align: center;
     background-color: #B9B9A5;
+
 }
-
-
 .caroussel img {
     padding: 15px;
     width: 20em;
@@ -132,21 +138,15 @@ body {
     border-radius: 50%;
 }
 
-
-.caroussel a img {
-    width: 4em;
-    height: auto;
-}
-
 .caroussel ul li p {
-    color: #6E6153;
+    color: #6E6153;  
 }
 
 .caroussel p:nth-of-type(1) {
     margin: .25em;
     font-size: 1.5em;
     font-weight: bold;
-}
+} 
 
 
 /****** Chat ********/
@@ -177,5 +177,3 @@ body {
     border-radius: 1em;
     background-color:  #B9B9A5;
 }
-
-

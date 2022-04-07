@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //set view
 app.set('view engine', 'ejs');
 
-    //get started at home page 
+//get started at home page 
 app.get('/', async (req, res) => {
     res.render('index')
 });

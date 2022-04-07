@@ -9,15 +9,35 @@
     <link href="/styles /styles.css" rel="stylesheet">
 </head>
 
-<body class="caroussel"  >
-    <main>
+<body   >
+    <main class="profielen">
+        <h1> Deze mensen zijn een match!</h1>
+        
+        <div class="caroussel">
+           
+                <ul>
+                    
+                <% profielen.forEach(function(profiel) { %>
+                    <li>
+                    <img src="/img /<%=profiel.url %>" alt="profielimg">
+                    
+                
+                        <p><%= profiel.Name %></p>
+                        <p><%= profiel.DOB%></p>
+                        <p>Hobby: <%= profiel.Hobby %></p>
+                        <p>Bestemming: <%= profiel.Bestemming %></p>
+                        <p>Duur: <%= profiel.Duur %></p>
+                        <p>Beschrijving: <%= profiel.Beschrijving %><p>
+                    </li>
+                        <% }) %>
+                </ul>
+            </div>
 
-        <section>
-            <h1> Deze mensen zijn een match!</h1>
-
-            <ul draggable="true"> 
-                <% profielen.forEach(function(profiel){ %>
-                <li>
+            <button id="prevBtn">prev</button>
+            <button id="nextBtn">next</button>
+            <!-- <ul  > 
+                <% profielen.forEach(function(profiel) { %>
+                <li >
                     <img src="/img /<%=profiel.url %>" alt="profielimg">
                     <a href="/chat"><img src="https://img.icons8.com/material-rounded/24/000000/chat--v1.png" /></a>
 
@@ -29,9 +49,10 @@
                     <p>Duur: <%= profiel.Duur %></p>
                     <p>Beschrijving: <%= profiel.Beschrijving %><p>
                 </li>
-                <% }) %>
-            </ul>
-        </section>
+                    <% }) %>
+                </ul>  -->
+
+      
         
     </main>
 
