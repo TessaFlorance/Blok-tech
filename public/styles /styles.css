@@ -109,14 +109,14 @@ body {
 
 
 .caroussel{
-    /* overflow: scroll;   */
+    overflow: scroll;   
 }
 .caroussel ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
-    overflow-x: scroll;
+    
 
    
      /* scroll-snap-type: x mandatory;  */
@@ -127,8 +127,9 @@ body {
     padding: 0px 0px 100px 0px;
     text-align: center;
     border-radius: 2em;
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
     background-color: #B9B9A5;
+   
 
 }
 .caroussel img {
@@ -177,3 +178,5 @@ body {
     border-radius: 1em;
     background-color:  #B9B9A5;
 }
+
+
