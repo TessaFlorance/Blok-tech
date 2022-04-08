@@ -116,10 +116,6 @@ body {
     padding: 0;
     display: flex;
     list-style: none;
-    
-
-   
-     /* scroll-snap-type: x mandatory;  */
 }
 
 .caroussel ul li {
@@ -127,7 +123,6 @@ body {
     padding: 0px 0px 100px 0px;
     text-align: center;
     border-radius: 2em;
-    /* scroll-snap-align: center; */
     background-color: #B9B9A5;
    
 
@@ -149,7 +144,16 @@ body {
     font-weight: bold;
 } 
 
+#prevBtn, #nextBtn {
+    background-color:#B9B9A5 ;
+    border-radius: 2em;
+    color: #6E6153;
+    padding: 15px 32px;
+    justify-content: center;
+    font-size: 16px;
+    margin: 4px 25px 0px 50px;
 
+}
 /****** Chat ********/
 .chan main{
     position: absolute;
