@@ -9,39 +9,27 @@
     <link href="/styles /styles.css" rel="stylesheet">
 </head>
 
-<body   >
+<body>
     <main class="profielen">
         <h1> Deze mensen zijn een match!</h1>
-        
-        <div class="caroussel">
-           
-                <ul>
-                    
+        <section class="caroussel">
+            <ul>
                 <% profielen.forEach(function(profiel) { %>
-                    <li>
+                <li>
                     <img src="/img /<%=profiel.url %>" alt="profielimg">
-                    
-                
-                        <p><%= profiel.Name %></p>
-                        <p><%= profiel.DOB%></p>
-                        <p>Hobby: <%= profiel.Hobby %></p>
-                        <p>Bestemming: <%= profiel.Bestemming %></p>
-                        <p>Duur: <%= profiel.Duur %></p>
-                        <p>Beschrijving: <%= profiel.Beschrijving %><p>
-                    </li>
-                        <% }) %>
-                </ul>
-            </div>
-
-            <button id="prevBtn">prev</button>
-            <button id="nextBtn">next</button>
-          
-
-      
-        
+                    <p><%= profiel.Name %></p>
+                    <p><%= profiel.DOB%></p>
+                    <p>Hobby: <%= profiel.Hobby %></p>
+                    <p>Bestemming: <%= profiel.Bestemming %></p>
+                    <p>Duur: <%= profiel.Duur %></p>
+                    <p>Beschrijving: <%= profiel.Beschrijving %><p>
+                </li>
+                <% }) %>
+            </ul>
+        </section>
+        <button id="prevBtn">prev</button>
+        <button id="nextBtn">next</button>
     </main>
-
-    
     <script src="/script/carousel.js"></script>
 </body>
 

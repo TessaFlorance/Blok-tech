@@ -101,21 +101,23 @@ body {
 /****** STYLING PROFIELEN CAROUSEL********/
 
 
-.profielen h1{
-    text-align: center;
+.profielen h1 {
     margin: 1em 0em;
+    text-align: center;
     color: #6E6153;
 }
 
-
-.caroussel{
-    overflow: scroll;   
+.caroussel {
+    overflow: scroll;
 }
+
 .caroussel ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
+    transition: ease-in-out .7s;
+
 }
 
 .caroussel ul li {
@@ -124,9 +126,8 @@ body {
     text-align: center;
     border-radius: 2em;
     background-color: #B9B9A5;
-   
-
 }
+
 .caroussel img {
     padding: 15px;
     width: 20em;
@@ -135,52 +136,51 @@ body {
 }
 
 .caroussel ul li p {
-    color: #6E6153;  
+    color: #6E6153;
 }
 
 .caroussel p:nth-of-type(1) {
     margin: .25em;
     font-size: 1.5em;
     font-weight: bold;
-} 
+}
 
-#prevBtn, #nextBtn {
-    background-color:#B9B9A5 ;
-    border-radius: 2em;
-    color: #6E6153;
+#prevBtn,
+#nextBtn {
+    margin: 4px 25px 0px 50px;
     padding: 15px 32px;
+    border-radius: 2em;
     justify-content: center;
     font-size: 16px;
-    margin: 4px 25px 0px 50px;
-
+    color: #6E6153;
+    background-color: #B9B9A5;
 }
+
 /****** Chat ********/
-.chan main{
+.chan main {
     position: absolute;
 }
 
-.chat h1{
+.chat h1 {
     margin: 1em 0em;
     text-align: center;
-    color: #6E6153; 
+    color: #6E6153;
 }
 
-.chat img{
-    padding: 15px; 
+.chat img {
+    padding: 15px;
     width: 7em;
     height: auto;
     border-radius: 50%;
     z-index: 100;
 }
 
-.chat p{
+.chat p {
     margin: 0px 10px;
     padding: 20px 106px 20px 20px;
     position: absolute;
     top: 89px;
     left: 100px;
     border-radius: 1em;
-    background-color:  #B9B9A5;
+    background-color: #B9B9A5;
 }
-
-

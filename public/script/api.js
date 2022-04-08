@@ -1,29 +1,30 @@
 //preview Image
-const loadFile = function(event) {
-	const image = document.getElementById('previewphoto');
-	image.src = URL.createObjectURL(event.target.files[0]);
-    // https://www.youtube.com/watch?v=iw4lvZGBuvA&ab_channel=OstonCodeCypher 
+const loadFile = function (event) {
+    const image = document.getElementById('previewphoto');
+    image.src = URL.createObjectURL(event.target.files[0]);
 };
 
 
-// De 'REST Countries' API wordt ingeladen in het document
+//Api rest Countries wordt in geladen
 document.addEventListener('DOMContentLoaded', () => {
-  const CountryDropdown = document.getElementById('Bestemming');
+    const CountryDropdown = document.getElementById('Bestemming');
 
-  fetch('https://restcountries.com/v2/all').then(res => {
-      return res.json();
-  }).then(countries => {
-      let output = "";
+    fetch('https://restcountries.com/v2/all').then(res => {
+        return res.json();
+    }).then(countries => {
+        let output = "";
 
-      // Er wordt door elk land in de API heen 'geloopt', waarmee elke naam van het land uit het object gehaald wordt en wordt toegevoegd aan een output variabele
-      countries.forEach(country => {
-          output += `<option>${country.name}</option>`;
-      });
-      
-      // Vervolgens wordt deze output toegevoegd aan het select element, welke eerder uit de EJS pagina is opgehaald
-      CountryDropdown.innerHTML = output;
-  }).catch(err => {
-      // Bij sprake van een error wordt deze error naar de console gelogd
-     console.log(err);
-  })
-}); 
+        //Er wordt door elk land heen geloopt die in de api staat.
+        //Dat er voorzorgt dat het land uit het object wordt gehaald en wordt toegevoegd aan de variable output
+
+        countries.forEach(country => {
+            output += `<option>${country.name}</option>`;
+        });
+
+        // output wordt toegevoegd aan element als de pagina wordt geladen
+        CountryDropdown.innerHTML = output;
+    }).catch(err => {
+        // error zie dit in consol log 
+        console.log(err);
+    })
+});
