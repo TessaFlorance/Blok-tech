@@ -14,7 +14,7 @@ body {
 
 /************ index, inlog pagina  **********/
 .index h1 {
-    margin: 100px 90px 0px 0px;
+    margin: 3em;
     text-align: center;
     font-weight: bold;
     color: #6E6153;
@@ -27,14 +27,14 @@ body {
 }
 
 .index label {
-    margin: 10px;
+    margin: .5em;
     justify-self: center;
     color: #6E6153;
 }
 
 .index input {
-    margin: 5px 50px 10px 10px;
-    padding: 5px;
+    margin: .3em 3.125em .6em .6em;
+    padding: .3em;
     border-radius: 1em;
     font-weight: bold;
     background-color: #EAEAEA;
@@ -42,7 +42,7 @@ body {
 }
 
 .aanmelden a {
-    margin: 0px 0px 0px 30px;
+    margin: 0em 0em 0em 1.875em;
     padding: 10px;
     text-decoration: none;
     border-radius: 1em;
@@ -52,13 +52,14 @@ body {
 
 /********* registreren *********/
 .registeren {
-    margin: 10px;
+    margin: .625em;
     position: relative;
 }
 
 .registeren h1 {
     margin: 1em 0em;
     color: #6E6153;
+    text-align: center;
 }
 
 .registeren form {
@@ -73,8 +74,8 @@ body {
 }
 
 .registeren input {
-    margin: 5px 50px 10px 10px;
-    padding: 5px;
+    margin: .3em 3.125em .6em .6em;
+    padding: .3em;
     font-weight: bold;
     border-radius: 1em;
     background-color: #EAEAEA;
@@ -83,8 +84,8 @@ body {
 }
 
 .registeren select {
-    margin: 5px 50px 10px 10px;
-    padding: 5px;
+    margin: .3em 3.125em .6em .6em;
+    padding: .3em;
     font-weight: bold;
     border-radius: 1em;
     background-color: #EAEAEA;
@@ -117,22 +118,14 @@ body {
     display: flex;
     list-style: none;
     transition: ease-in-out .7s;
-
 }
 
 .caroussel ul li {
-    margin: 10px;
-    padding: 0px 0px 100px 0px;
+    margin: .625em;
+    padding: 0em 0em 6.25em 0em;
     text-align: center;
     border-radius: 2em;
     background-color: #B9B9A5;
-}
-
-.caroussel img {
-    padding: 15px;
-    width: 20em;
-    height: 20em;
-    border-radius: 50%;
 }
 
 .caroussel ul li p {
@@ -145,15 +138,28 @@ body {
     font-weight: bold;
 }
 
+.caroussel img {
+    padding: 1em;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+}
+
 #prevBtn,
 #nextBtn {
-    margin: 4px 25px 0px 50px;
-    padding: 15px 32px;
+    margin: .25em 1.5em 0em 3.1em;
+    padding: 1em 2em;
     border-radius: 2em;
     justify-content: center;
     font-size: 16px;
     color: #6E6153;
     background-color: #B9B9A5;
+
+}
+
+#prevBtn:disabled,
+#nextBtn:disabled {
+    opacity: .2;
 }
 
 /****** Chat ********/
@@ -168,7 +174,7 @@ body {
 }
 
 .chat img {
-    padding: 15px;
+    padding: 1em;
     width: 7em;
     height: auto;
     border-radius: 50%;
@@ -176,11 +182,11 @@ body {
 }
 
 .chat p {
-    margin: 0px 10px;
-    padding: 20px 106px 20px 20px;
+    margin: 0em .625em;
+    padding: 1.25em 6.625em 1.25em 1.25em;
     position: absolute;
-    top: 89px;
-    left: 100px;
+    top: 5.6em;
+    left: 6.25em;
     border-radius: 1em;
     background-color: #B9B9A5;
 }

@@ -21,3 +21,6 @@ prevBtn.addEventListener('click', () => {
     counter--;
     carouselSlide.style.transform = 'translatex(' + (-size * counter) + 'px)';
 });
+
+nextBtn.removeAttribute('disabled');
+prevBtn.removeAttribute('disabled');
